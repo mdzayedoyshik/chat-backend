@@ -2,7 +2,7 @@
 
 A chat API on Express 5, MongoDB (Mongoose) and Socket.IO. Users log in with email and password and get a JWT. They can start a conversation with another user, send text messages with image or PDF attachments, and join a Socket.IO room per conversation to receive messages live.
 
-I wrote it to understand the server side of the chat features I had been building in Flutter apps.
+It is the server side of the real-time chat I build into Flutter apps, kept small enough to read in one sitting.
 
 ## Layout
 
