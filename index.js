@@ -1,5 +1,6 @@
 // import modules: external
 import express from "express";
+import http from "http";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import path from "path";
@@ -21,8 +22,11 @@ const __dirname = path.dirname(__filename);
 const app = express();
 dotenv.config();
 
-// connect socket
-// const io = new Server(server, { cors: { origin: "*" } });
+// HTTP server shared by Express and Socket.IO
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: { origin: process.env.CLIENT_ORIGIN || "*" },
+});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URL).then(() => {
@@ -51,9 +55,9 @@ app.use(notFound);
 app.use(errorHandler);
 
 // socket handler
-// socketHandler(io);
+socketHandler(io);
 
 // start server
-app.listen(process.env.PORT, () => {
+server.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
 });
