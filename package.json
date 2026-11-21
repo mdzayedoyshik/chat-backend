@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xX0ZAK0Xx/chat-backend.git"
+    "url": "git+https://github.com/mdzayedoyshik/chat-backend.git"
   },
   "author": "Zayed",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xX0ZAK0Xx/chat-backend/issues"
+    "url": "https://github.com/mdzayedoyshik/chat-backend/issues"
   },
-  "homepage": "https://github.com/xX0ZAK0Xx/chat-backend#readme",
+  "homepage": "https://github.com/mdzayedoyshik/chat-backend#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
